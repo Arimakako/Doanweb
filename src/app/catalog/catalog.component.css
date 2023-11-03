@@ -1,0 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+        table{
+                table-layout: fixed;
+                width: 100%;
+                border-collapse: collapse;
+                border: 0;
+            }
+            body {
+            font-family: 'Nunito';
+            }
+            button {
+                object-fit: contain;
+                text-align: center;
+                font-family: 'Nunito';
+            }
+            span{
+                display: inline-block;
+                justify-content: space-between;
+            }
+            .column {
+                float: left;
+            }
+            .strikethrough {
+                text-decoration: line-through;
+                color: #6f6060; /* Optional: Set the color for the strikethrough text */
+              }
+              .content-center {
+                text-align: center;
+            }

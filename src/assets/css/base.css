@@ -1,0 +1,17 @@
+:root{
+    --primary:#EEECE0;
+    --secondary:#F5F5F5;
+    --text:#311C1C;
+    --blue-text:#22668D;
+    --red-text:#FF7970;
+    --yellow-btn:#FFCC70;
+
+}
+html, body{
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    font-size: 15px;
+}
