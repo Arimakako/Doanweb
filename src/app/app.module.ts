@@ -16,8 +16,7 @@ import { ServicesComponent } from './services/services.component';
 import { TipsComponent } from './tips/tips.component';
 import { FeaturedarticleComponent } from './featuredarticle/featuredarticle.component';
 import { CheckComponent } from './check/check.component';
-
-
+import { CartComponent } from './cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +33,7 @@ import { CheckComponent } from './check/check.component';
     TipsComponent,
     FeaturedarticleComponent,
     CheckComponent,
+    CartComponent,
 
   ],
   imports: [

@@ -10,6 +10,8 @@ import { ServicesComponent } from './services/services.component';
 import { TipsComponent } from './tips/tips.component';
 import { FeaturedarticleComponent } from './featuredarticle/featuredarticle.component';
 import { CheckComponent } from './check/check.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -22,6 +24,8 @@ const routes: Routes = [
 {path: 'tips', component:TipsComponent},
 {path: 'tips', component:FeaturedarticleComponent}, 
 {path:'check',component:CheckComponent},
+{path:'aboutus',component:AboutusComponent},
+{path:'cart',component:CartComponent},
 ];
   
 @NgModule({
