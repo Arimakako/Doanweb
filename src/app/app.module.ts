@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { RegisterComponent } from './register/register.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 import { ProductComponent } from './product/product.component';
 import { ProductdetailComponent } from './productdetail/productdetail.component';
@@ -17,12 +16,15 @@ import { TipsComponent } from './tips/tips.component';
 import { FeaturedarticleComponent } from './featuredarticle/featuredarticle.component';
 import { CheckComponent } from './check/check.component';
 import { CartComponent } from './cart/cart.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ComboComponent } from './combo/combo.component';
+import { PlansComponent } from './plans/plans.component';
+import { OrderTrackingComponent } from './order-tracking/order-tracking.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    RegisterComponent,
     ForgetpasswordComponent,
     ProductComponent,
     ProductdetailComponent,
@@ -34,11 +36,16 @@ import { CartComponent } from './cart/cart.component';
     FeaturedarticleComponent,
     CheckComponent,
     CartComponent,
+    ComboComponent,
+    PlansComponent,
+    OrderTrackingComponent,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

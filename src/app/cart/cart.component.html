@@ -1,14 +1,17 @@
+
 <div class="container">
     <div class="header-check">
       <h2>Your cart</h2>
       <button type="button" class="btn btn-link top-right-button-back">Back</button>
-    </div>
+</div>
     <main>
-      
       <div class="order">
           <table class="table table-checkout">
             <thead>
               <tr>
+                <td><label>
+                  <input type="checkbox" class="childCheckbox"> 
+                </label></td>
                 <th scope="col">Items</th>
                 <th scope="col">Prices</th>
                 <th scope="col">Qty</th>
@@ -17,14 +20,18 @@
               </tr>
             </thead>
             <tbody>
+              
               <tr>
-                <td class="w-25">
+                <td><label>
+                  <input type="checkbox" class="childCheckbox"> 
+                </label></td>
+                <td class="w-50">
                   <img src="\assets\images\productdetail_img\toy9.png" class="img-fluid" alt="Sheep">
                   Under stair Hamster house</td>
                 <td>129.000VND</td>
                <td class="qty"><input type="text" class="form-control" id="input1" value="0"></td>
                <td>129000</td>
-               <td>cancel</td>
+               <td class="Operation">cancel</td>
              </tr>
              <!--them tr moi khi co san pham-->
            </tbody>
@@ -47,7 +54,7 @@
                 <td><label>
                     <input type="checkbox" class="childCheckbox"> 
                   </label></td>
-                <td class="w-25">
+                <td class="w-50">
                   <img src="\assets\images\services_img\h2.png" class="img-fluid" alt="Sheep">
                   Under stair Hamster house</td>
                 <td>129.000VND</td>
@@ -64,7 +71,7 @@
           <div class="col-sm-6 d-flex justify-content-center">
             <button type="button" class="btn btn-success">Proceed to checkout</button>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-5">
             <div class="totals">
               <div class="totals-item d-flex justify-content-between">
                 <label>Subtotal(x items)</label>

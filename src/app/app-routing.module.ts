@@ -1,31 +1,33 @@
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { RegisterComponent } from './register/register.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 import { ProductComponent } from './product/product.component';
 import { ProductdetailComponent } from './productdetail/productdetail.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { ServicesComponent } from './services/services.component';
 import { TipsComponent } from './tips/tips.component';
-import { FeaturedarticleComponent } from './featuredarticle/featuredarticle.component';
 import { CheckComponent } from './check/check.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { CartComponent } from './cart/cart.component';
+import { OrderTrackingComponent } from './order-tracking/order-tracking.component';
+import { FirstComponent } from './first/first.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
-  {path:'',component:HomeComponent},
-{path: 'register', component:RegisterComponent},
+{path:'',component:HomeComponent},
 {path: 'forgetpassword', component:ForgetpasswordComponent},
+{path:'login',component:FirstComponent},
 {path:'product',component:ProductComponent},
 {path:'product/productdetail',component:ProductdetailComponent},
 {path:'product/catalog',component:CatalogComponent},
 {path:'services',component:ServicesComponent},
 {path: 'tips', component:TipsComponent},
-{path: 'tips', component:FeaturedarticleComponent}, 
 {path:'check',component:CheckComponent},
 {path:'aboutus',component:AboutusComponent},
 {path:'cart',component:CartComponent},
+{path:'tracking',component:OrderTrackingComponent},
+{path:'signup',component:SignupComponent},
 ];
   
 @NgModule({
