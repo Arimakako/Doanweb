@@ -42,8 +42,8 @@ import { OrderTrackingComponent } from './order-tracking/order-tracking.componen
 
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
     FormsModule,
     HttpClientModule
   ],

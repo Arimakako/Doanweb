@@ -6,11 +6,5 @@ import { Router } from '@angular/router';
   styleUrls: ['./first.component.css']
 })
 export class FirstComponent {
-  constructor(private router: Router) {}
-
-  redirectToSignup() {
-    // Navigate to the Signup route when the link is clicked
-    this.router.navigate(['signup']);
-  }
 }
 
