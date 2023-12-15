@@ -1,179 +1,57 @@
-body {
-    margin: 0;
-}
 
 
-.topbar {
-    background-color: rgb(255, 250, 221);
-    height: 15vh;
+.main-container {
     width: 100%;
-    display: inline-block;
-    position: relative;
-    font-family: 'Nunito', Times;
+    margin: auto;
+    background: #FFFADD;
 }
 
-.topbar .logo-area {
-    height: 100%;
-    display: inline;
-    float:left;
-    position: relative;
-}
-
-.topbar .logo-area img {
-    height: 100%;
-}
-
-.topbar .title-area {
-    height: 100%;
+.header {
     display: flex;
-    float:left;
+    justify-content: space-between;
     align-items: center;
+
+    padding: 10px;
 }
 
-.topbar .right {
-    height: 100%;
-    width: 75%;
-    display: inline;
-    float:left;
+.logo-image {
+    width: 156px;
+    height: 148px;
 }
 
-.topbar .right .upright {
-    float: left;
-    height: 70%;
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-}
-
-.topbar .right .upright .searchbox {
-    width: 80%;
-    height: 40px;
-    position: relative;
-    margin-left: 5%;
-    
-}
-.topbar .right .upright .searchbox input {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    border: #0000;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-}
-
-.topbar .right .upright .bagicon {
-    width: 70px;
-    height: 70px;
-    float: left;
-    display: inline;
-    position: relative;
-}
-.topbar .right .upright .bagicon img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    padding-left: 40px;
-    padding-right: 20px;
-}
-
-.topbar .right .upright .accicon {
-    width:50px;
-    height: 50px;
-    float: left;
-    display: inline;
-    position: relative;
-}
-.topbar .right .upright .accicon img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    padding-left: 80px;
-    padding-right: 20px;
-}
-.topbar .right .downright {
-    float: left;
-    height: 40%;
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-.topbar .right .downright .menu
-{
- width: 100%;
- height: 20px;font-family: 'Nunito', Times;
- font-size: 20px;
-}
-
-.topbar .right .downright .menu ul
-{
-  margin-top:  2px;
-  margin-left: -100px;
-
-}
-
-.topbar .right .downright .menu ul li {
-    list-style-type: none;
-    display: inline;
-    margin-left: 90px;
-}
-
-.topbar .right .downright .menu ul li a:link 
-{
-   color: #000000;
-   text-decoration: none;
-   padding-top: 40px;
-   padding-bottom: 40px;
-   padding-left: 30px;
-   padding-right: 0px;
-}
-              
-.topbar .right .downright .menu ul li a:visited
-{
-   color: #000000;
-   text-decoration: none;
-}
-
-.dropdown {
-    position: relative;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 10px;
-    top: 30px;
-    left: 10px;
-}
-
-.topbar .right .downright .menu ul li .dropdown-content a {
+.brand-name {
     color: black;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-decoration: none;
-    display: block;
+    font-size: 40px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+}
+#search-bar {
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+}
+.search-bar {
+    width: 50%;
+    height: 50px;
+    border-radius: 30px;
 }
 
-.dropdown-content a:hover {
-    background-color: rgb(142, 205, 221);
-    border-radius: 10px;
-}
-.dropdown:hover .dropdown-content {
-    display: block;
+.profile-image, .cart-icon {
+    width: 58px;
+    height: 62px;
 }
 
-.dropdown > a:after {
-    content: '▼';
-    position: absolute;
-    right: -20px;
+.navigation {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
 }
-.bagicon{
-    width: auto;
-}
-.accicon{
-    width: auto;
+
+.nav-item {
+    color: black;
+    font-size: 25px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    margin: 0 50px;
+   
 }
