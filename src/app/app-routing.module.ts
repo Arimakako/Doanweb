@@ -13,6 +13,7 @@ import { CartComponent } from './cart/cart.component';
 import { OrderTrackingComponent } from './order-tracking/order-tracking.component';
 import { FirstComponent } from './first/first.component';
 import { SignupComponent } from './signup/signup.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
 {path:'',component:HomeComponent},
@@ -28,6 +29,8 @@ const routes: Routes = [
 {path:'cart',component:CartComponent},
 {path:'tracking',component:OrderTrackingComponent},
 {path:'signup',component:SignupComponent},
+{path:'profile',component:ProfileComponent}
+
 ];
   
 @NgModule({

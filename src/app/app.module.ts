@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -20,6 +19,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { ComboComponent } from './combo/combo.component';
 import { PlansComponent } from './plans/plans.component';
 import { OrderTrackingComponent } from './order-tracking/order-tracking.component';
+import { FirstComponent } from './first/first.component';
+import { SignupComponent } from './signup/signup.component';
+import { ProfileComponent } from './profile/profile.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,13 +42,17 @@ import { OrderTrackingComponent } from './order-tracking/order-tracking.componen
     ComboComponent,
     PlansComponent,
     OrderTrackingComponent,
+    FirstComponent,
+    SignupComponent,
+    ProfileComponent,
 
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
-    FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
