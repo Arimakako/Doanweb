@@ -1,66 +1,125 @@
-<div class="grid-container">
-<div class="filter-container">
-    <div class="filter-section">
-        <div class="filter-title">Filters</div>
-        <div class="filter-reset">Reset all</div>
-        <div class="filter-option">
-            <div class="filter-label">Best seller</div>
-            <div class="filter-arrow"></div>
-        </div>
-        <div class="filter-option">
-            <div class="filter-label">Food and drink</div>
-            <div class="filter-arrow"></div>
-        </div>
-        <div class="filter-option">
-            <div class="filter-label">Care product</div>
-            <div class="filter-arrow"></div>
-        </div>
-        <div class="filter-option">
-            <div class="filter-label">Outfit</div>
-            <div class="filter-arrow"></div>
-        </div>
-        <div class="filter-option">
-            <div class="filter-label">Toys and Item</div>
-            <div class="filter-arrow"></div>
-        </div>
-    </div>
+<!-- ============== SECTION PAGETOP ============== -->
+<section class="py-5">
+    <div class="container">
+      <h2 class="text-white"> CATALOG </h2>
+      <ol class="breadcrumb ondark mb-0">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Product</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Product Catalog</li>
+      </ol>
+    </div> <!-- container //  -->
+    </section>
+<!-- ============== SECTION PAGETOP END// ============== -->
+<!-- ============== SECTION CONTENT ============== -->
+<section class="padding-y">
+    <div class="container">
+    
+    <div class="row">
+      <aside class="col-lg-3">
+    
+    
+    <!-- ===== Card for sidebar filter ===== -->
+    <div id="aside_filter" class="collapse card d-lg-block mb-5">
 
-    <div class="filter-section">
-        <div class="filter-title">Price</div>
-        <div class="filter-option">
-            <div class="filter-label">Under 100.000 VND</div>
-            <div class="filter-count">(123)</div>
-        </div>
-        <div class="filter-option">
-            <div class="filter-label">100.000 VND - 300.000 VND</div>
-            <div class="filter-count">(123)</div>
-        </div>
-        <div class="filter-option">
-            <div class="filter-label">300.000 VND - 500.000 VND</div>
-            <div class="filter-count">(123)</div>
-        </div>
-        <div class="filter-option">
-            <div class="filter-label">Above 500.000 VND</div>
-            <div class="filter-count">(123)</div>
-        </div>
-    </div>
+        <article class="filter-group">
+            <header class="card-header">
+              <a class="title" data-bs-toggle="collapse" href="#collapse_aside_filter" role="button" aria-expanded="false" aria-controls="collapse_aside_filter">
+              <i class="icon-control fa fa-chevron-down"></i> Filters 
+              </a>
+            </header>
+            <div class="collapse" id="collapse_aside_filter">
+              <div class="card-body">
+                <label class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" value="" checked>
+                <span class="form-check-label"> Best seller </span>
+                <b class="badge rounded-pill bg-gray-dark float-end">120</b>
+                </label> <!-- form-check end.// -->
+          
+                <label class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" value="" checked>
+                <span class="form-check-label"> Outfit </span>
+                <b class="badge rounded-pill bg-gray-dark float-end">15</b>
+                </label> <!-- form-check end.// -->
+    
+                <label class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" value="" checked>
+                <span class="form-check-label"> Food and drink </span>
+                <b class="badge rounded-pill bg-gray-dark float-end">15</b>
+                </label> <!-- form-check end.// -->
+    
+                <label class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" value="" checked>
+                <span class="form-check-label"> Toys </span>
+                <b class="badge rounded-pill bg-gray-dark float-end">15</b>
+                </label> <!-- form-check end.// -->
+              </div> <!-- card-body .// -->
+        </div> <!-- collapse.// -->
+        </article>
 
-    <div class="filter-section">
-        <div class="filter-title">Pet Type</div>
-        <div class="filter-option">
-            <div class="filter-label">Cat</div>
-            <div class="filter-count">(123)</div>
-        </div>
-        <div class="filter-option">
-            <div class="filter-label">Dog</div>
-            <div class="filter-count">(123)</div>
-        </div>
-        <div class="filter-option">
-            <div class="filter-label">Hamster</div>
-            <div class="filter-count">(122)</div>
-        </div>
-    </div>
+      <article class="filter-group">
+        <header class="card-header">
+          <a class="title" data-bs-toggle="collapse" data-bs-target="#collapse_aside_price" role="button" aria-expanded="false">
+          <i class="icon-control fa fa-chevron-down"></i>  Price 
+          </a>
+        </header>
+        <div class="collapse" id="collapse_aside_price">
+          <div class="card-body">
+            <label class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="" checked>
+            <span class="form-check-label"> Under 100.000 VND </span>
+            <b class="badge rounded-pill bg-gray-dark float-end">120</b>
+            </label> <!-- form-check end.// -->
+      
+            <label class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="" checked>
+            <span class="form-check-label"> 100.000 VND - 300.000 VND </span>
+            <b class="badge rounded-pill bg-gray-dark float-end">15</b>
+            </label> <!-- form-check end.// -->
+
+            <label class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="" checked>
+            <span class="form-check-label"> 300.000 VND - 500.000 VND </span>
+            <b class="badge rounded-pill bg-gray-dark float-end">15</b>
+            </label> <!-- form-check end.// -->
+
+            <label class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="" checked>
+            <span class="form-check-label"> Above 500.000 VND </span>
+            <b class="badge rounded-pill bg-gray-dark float-end">15</b>
+            </label> <!-- form-check end.// -->
+        </div> <!-- card-body .// -->
+    </div> <!-- collapse.// -->
+    </article>
+    <article class="filter-group">
+        <header class="card-header">
+          <a class="title" data-bs-toggle="collapse" data-bs-target="#collapse_aside_type" role ="button">
+          <i class="icon-control fa fa-chevron-down"></i>  Pet type
+          </a>
+        </header>
+        <div class="collapse" id="collapse_aside_type">
+          <div class="card-body">
+            <label class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="" checked>
+            <span class="form-check-label"> Cat </span>
+            <b class="badge rounded-pill bg-gray-dark float-end">120</b>
+            </label> <!-- form-check end.// -->
+      
+            <label class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="" checked>
+            <span class="form-check-label"> Dog </span>
+            <b class="badge rounded-pill bg-gray-dark float-end">15</b>
+            </label> <!-- form-check end.// -->
+
+            <label class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" value="" checked>
+            <span class="form-check-label"> Hamster </span>
+            <b class="badge rounded-pill bg-gray-dark float-end">15</b>
+            </label> <!-- form-check end.// -->
+        </div> <!-- card-body .// -->
+    </div> <!-- collapse.// -->
+    </article>
 </div>
+      </aside>
 <div class="banner">
     <img class="banner-image" src="./assets/images/productcatalog_img/image 1643.png" alt="Banner Image">
 </div>
