@@ -14,6 +14,7 @@ import { OrderTrackingComponent } from './order-tracking/order-tracking.componen
 import { FirstComponent } from './first/first.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ComboComponent } from './combo/combo.component';
 
 const routes: Routes = [
 {path:'',component:HomeComponent},
@@ -29,7 +30,9 @@ const routes: Routes = [
 {path:'cart',component:CartComponent},
 {path:'tracking',component:OrderTrackingComponent},
 {path:'signup',component:SignupComponent},
-{path:'profile',component:ProfileComponent}
+{path:'profile',component:ProfileComponent},
+{path:'combo',component:ComboComponent},
+{path:'**',component:HomeComponent}
 
 ];
   
