@@ -11,38 +11,63 @@ export class SignupComponent {
   lastname: string = '';
   email: string = '';
   password: string = '';
-  confirmPassword: string = ''; // Added for confirm password
+  confirmPassword: string = '';
+  alertMessage: string = ''; // Property to store alert message
 
   constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {}
+  // Kiểm tra tính hợp lệ của email
+  isValidEmail(email: string): boolean {
+    const emailRegex = /^(([^<>()\[\]\\.,;:\s@\"]+(\.[^<>()\[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return emailRegex.test(email);
+  }
 
+  // Kiểm tra xem mật khẩu có khớp nhau không
+  isPasswordValid(): boolean {
+    return this.password === this.confirmPassword;
+  }
+  showModal: boolean = false;
   register() {
     if (!this.isPasswordValid()) {
-      alert('Passwords do not match!');
+      this.showAlert('Passwords do not match!');
       return;
     }
-
+  
+    if (!this.isValidEmail(this.email)) {
+      this.showAlert('Invalid email format');
+      return;
+    }
+  
     let bodyData = {
       firstname: this.firstname,
       lastname: this.lastname,
       email: this.email,
       password: this.password,
     };
-
+  
     this.http.post('http://localhost:9992/user/create', bodyData)
-      .subscribe((resultData: any) => {
-        console.log(resultData);
-        alert('user Registered Successfully');
-      });
+      .subscribe(
+        (resultData: any) => {
+          console.log(resultData);
+          this.showAlert('User Registered Successfully');
+        },
+        (error: any) => {
+          console.log(error);
+          // Xử lý dựa trên mã lỗi hoặc thông điệp lỗi từ phía server
+          if (error.status === 400 && error.error.message === 'Email already exists') {
+            this.showAlert('Email already exists');
+          } else {
+            this.showAlert('Error registering user');
+          }
+        }
+      );
   }
-
-  save() {
-    this.register();
+  
+  showAlert(message: string) {
+    this.alertMessage = message;
+    this.showModal = true; // Show the modal by setting this to true
   }
-
-  // New method to validate password
-  isPasswordValid(): boolean {
-    return this.password === this.confirmPassword;
+  closeModal() {
+    this.showModal = false; // Hide the modal
   }
 }
