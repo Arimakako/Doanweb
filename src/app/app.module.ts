@@ -23,6 +23,13 @@ import { FirstComponent } from './first/first.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
+import { ProductAdminComponent } from './product-admin/product-admin.component';
+import { ProductAdminDeleteComponent } from './product-admin-delete/product-admin-delete.component';
+import { ProductAdminDetailComponent } from './product-admin-detail/product-admin-detail.component';
+import { ProductAdminNewComponent } from './product-admin-new/product-admin-new.component';
+import { ProductAdminUpdateComponent } from './product-admin-update/product-admin-update.component';
+import {AngularEditorModule} from '@kolkov/angular-editor';
+import {NgxPaginationModule} from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,13 +52,20 @@ import { FormsModule } from '@angular/forms';
     FirstComponent,
     SignupComponent,
     ProfileComponent,
+    ProductAdminComponent,
+    ProductAdminDeleteComponent,
+    ProductAdminDetailComponent,
+    ProductAdminNewComponent,
+    ProductAdminUpdateComponent,
 
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AngularEditorModule,
+    NgxPaginationModule,
     
   ],
   providers: [],
