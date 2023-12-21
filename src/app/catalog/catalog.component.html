@@ -19,38 +19,38 @@
     
     
     <!-- ===== Card for sidebar filter ===== -->
-    <div id="aside_filter" class="collapse card d-lg-block mb-5">
+    <div class="filter-container collapse card d-lg-block mb-5">
 
-        <article class="filter-group">
+        <article class="filter-section">
             <header class="card-header">
               <a class="title" data-bs-toggle="collapse" href="#collapse_aside_filter" role="button" aria-expanded="false" aria-controls="collapse_aside_filter">
               <i class="icon-control fa fa-chevron-down"></i> Filters 
               </a>
             </header>
             <div class="collapse" id="collapse_aside_filter">
-              <div class="card-body">
+              <div class="filter-option">
                 <label class="form-check mb-2">
                 <input class="form-check-input" type="checkbox" value="" checked>
                 <span class="form-check-label"> Best seller </span>
-                <b class="badge rounded-pill bg-gray-dark float-end">120</b>
+                <b class="badge rounded-pill bg-gray-dark float-end filter-count">120</b>
                 </label> <!-- form-check end.// -->
           
                 <label class="form-check mb-2">
                 <input class="form-check-input" type="checkbox" value="" checked>
                 <span class="form-check-label"> Outfit </span>
-                <b class="badge rounded-pill bg-gray-dark float-end">15</b>
+                <b class="badge rounded-pill bg-gray-dark float-end filter-count">15</b>
                 </label> <!-- form-check end.// -->
     
                 <label class="form-check mb-2">
                 <input class="form-check-input" type="checkbox" value="" checked>
                 <span class="form-check-label"> Food and drink </span>
-                <b class="badge rounded-pill bg-gray-dark float-end">15</b>
+                <b class="badge rounded-pill bg-gray-dark float-end filter-count">15</b>
                 </label> <!-- form-check end.// -->
     
                 <label class="form-check mb-2">
                 <input class="form-check-input" type="checkbox" value="" checked>
                 <span class="form-check-label"> Toys </span>
-                <b class="badge rounded-pill bg-gray-dark float-end">15</b>
+                <b class="badge rounded-pill bg-gray-dark float-end filter-count">15</b>
                 </label> <!-- form-check end.// -->
               </div> <!-- card-body .// -->
         </div> <!-- collapse.// -->
@@ -120,83 +120,137 @@
     </article>
 </div>
       </aside>
-<div class="banner">
-    <img class="banner-image" src="./assets/images/productcatalog_img/image 1643.png" alt="Banner Image">
-</div>
-
-<div class="product-section">
-    <div class="product-grid">
-        <div class="product-card">
-            <img src="https://via.placeholder.com/320x334" alt="Product Image">
-            <div class="product-overlay">
-                <div class="badge sale">Sale</div>
+      <div class="container">
+        <img class="header-image" src="./assets/images/productcatalog_img/image 1643.png" />
+        <div class="header-info">
+            <div class="result-count">Results: 122</div>
+            <div class="sort-by">
+                <div class="sort-text">Sort by</div>
+                <div class="sort-arrow"></div>
             </div>
         </div>
-        <!-- Product 2 -->
-        <div class="product">
-            <img class="product-image" src="https://via.placeholder.com/320x334" />
-            
-            <div class="product-details">
+        <div class="products">
+            <!-- Product 1 -->
+            <div class="product">
+                <img class="product-image" src="https://via.placeholder.com/320x334" />
                 
-                <h2 class="product-title">Product 1</h2>
-                <div class="price">
-                    <div class="original-price">$19.99</div>
-                    <div class="discounted-price">$15.99</div>
+                <div class="product-details">
+                    
+                    <h2 class="product-title">Product 1</h2>
+                    <div class="price">
+                        <div class="original-price">$19.99</div>
+                        <div class="discounted-price">$15.99</div>
+                    </div>
+                    <button class="add-to-cart-button">Add to Cart</button>
                 </div>
-                <button class="add-to-cart-button">Add to Cart</button>
+                <div class="tag-container">
+                    <div class="tag-item bestseller-tag">bestseller</div>
+                    <div class="tag-item new-tag">New</div>
+                    <div class="tag-item sale-tag">Sale</div>
+                </div>
             </div>
-            <div class="tag-container">
-                <div class="tag-item bestseller-tag">bestseller</div>
-                <div class="tag-item new-tag">New</div>
-                <div class="tag-item sale-tag">Sale</div>
-            </div>
-        </div>
-        <div class="product">
-            <img class="product-image" src="https://via.placeholder.com/320x334" />
-            
-            <div class="product-details">
+            <!-- Product 2 -->
+            <div class="product">
+              <img class="product-image" src="https://via.placeholder.com/320x334" />
+              
+              <div class="product-details">
+                  
+                  <h2 class="product-title">Product 1</h2>
+                  <div class="price">
+                      <div class="original-price">$19.99</div>
+                      <div class="discounted-price">$15.99</div>
+                  </div>
+                  <button class="add-to-cart-button">Add to Cart</button>
+              </div>
+              <div class="tag-container">
+                  <div class="tag-item bestseller-tag">bestseller</div>
+                  <div class="tag-item new-tag">New</div>
+                  <div class="tag-item sale-tag">Sale</div>
+              </div>
+          </div>
+            <div class="product">
+                <img class="product-image" src="https://via.placeholder.com/320x334" />
                 
-                <h2 class="product-title">Product 1</h2>
-                <div class="price">
-                    <div class="original-price">$19.99</div>
-                    <div class="discounted-price">$15.99</div>
+                <div class="product-details">
+                    
+                    <h2 class="product-title">Product 1</h2>
+                    <div class="price">
+                        <div class="original-price">$19.99</div>
+                        <div class="discounted-price">$15.99</div>
+                    </div>
+                    <button class="add-to-cart-button">Add to Cart</button>
                 </div>
-                <button class="add-to-cart-button">Add to Cart</button>
+                <div class="tag-container">
+                    <div class="tag-item bestseller-tag">bestseller</div>
+                    <div class="tag-item new-tag">New</div>
+                    <div class="tag-item sale-tag">Sale</div>
+                </div>
             </div>
-            <div class="tag-container">
-                <div class="tag-item bestseller-tag">bestseller</div>
-                <div class="tag-item new-tag">New</div>
-                <div class="tag-item sale-tag">Sale</div>
-            </div>
-        </div>
-        <div class="product">
-            <img class="product-image" src="https://via.placeholder.com/320x334" />
-            
-            <div class="product-details">
+            <!-- Product 2 -->
+            <div class="product">
+                <img class="product-image" src="https://via.placeholder.com/320x334" />
                 
-                <h2 class="product-title">Product 1</h2>
-                <div class="price">
-                    <div class="original-price">$19.99</div>
-                    <div class="discounted-price">$15.99</div>
+                <div class="product-details">
+                    
+                    <h2 class="product-title">Product 1</h2>
+                    <div class="price">
+                        <div class="original-price">$19.99</div>
+                        <div class="discounted-price">$15.99</div>
+                    </div>
+                    <button class="add-to-cart-button">Add to Cart</button>
                 </div>
-                <button class="add-to-cart-button">Add to Cart</button>
+                <div class="tag-container">
+                    <div class="tag-item bestseller-tag">bestseller</div>
+                    <div class="tag-item new-tag">New</div>
+                    <div class="tag-item sale-tag">Sale</div>
+                </div>
             </div>
-            <div class="tag-container">
-                <div class="tag-item bestseller-tag">bestseller</div>
-                <div class="tag-item new-tag">New</div>
-                <div class="tag-item sale-tag">Sale</div>
+            <div class="product">
+                <img class="product-image" src="https://via.placeholder.com/320x334" />
+                
+                <div class="product-details">
+                    
+                    <h2 class="product-title">Product 1</h2>
+                    <div class="price">
+                        <div class="original-price">$19.99</div>
+                        <div class="discounted-price">$15.99</div>
+                    </div>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+                <div class="tag-container">
+                    <div class="tag-item bestseller-tag">bestseller</div>
+                    <div class="tag-item new-tag">New</div>
+                    <div class="tag-item sale-tag">Sale</div>
+                </div>
             </div>
+            <div class="product">
+                <img class="product-image" src="https://via.placeholder.com/320x334" />
+                
+                <div class="product-details">
+                    
+                    <h2 class="product-title">Product 1</h2>
+                    <div class="price">
+                        <div class="original-price">$19.99</div>
+                        <div class="discounted-price">$15.99</div>
+                    </div>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+                <div class="tag-container">
+                    <div class="tag-item bestseller-tag">bestseller</div>
+                    <div class="tag-item new-tag">New</div>
+                    <div class="tag-item sale-tag">Sale</div>
+                </div>
+            </div>
+            <!-- ... (Add more product entries as needed) ... -->
         </div>
-        <!-- ... (Add more product entries as needed) ... -->
+        <div class="page-numbers">
+          <div class="page-number">1</div>
+          <div class="page-number">2</div>
+          <div class="page-number">3</div>
+          <div class="page-number">...</div>
+          <div class="page-number">40</div>
+      </div>
+      </div>
+    
+      
     </div>
-    <div class="page-numbers">
-      <div class="page-number">1</div>
-      <div class="page-number">2</div>
-      <div class="page-number">3</div>
-      <div class="page-number">...</div>
-      <div class="page-number">40</div>
-  </div>
-  </div>
-
-  
-</div>
