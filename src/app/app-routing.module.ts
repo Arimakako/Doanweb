@@ -14,11 +14,7 @@ import { OrderTrackingComponent } from './order-tracking/order-tracking.componen
 import { FirstComponent } from './first/first.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
-import { ProductAdminComponent } from './product-admin/product-admin.component';
-import { ProductAdminDeleteComponent } from './product-admin-delete/product-admin-delete.component';
-import { ProductAdminDetailComponent } from './product-admin-detail/product-admin-detail.component';
-import { ProductAdminNewComponent } from './product-admin-new/product-admin-new.component';
-import { ProductAdminUpdateComponent } from './product-admin-update/product-admin-update.component';
+
 const routes: Routes = [
 {path:'',component:HomeComponent},
 {path: 'forgetpassword', component:ForgetpasswordComponent},
@@ -33,12 +29,8 @@ const routes: Routes = [
 {path:'cart',component:CartComponent},
 {path:'tracking',component:OrderTrackingComponent},
 {path:'signup',component:SignupComponent},
-{path:'profile',component:ProfileComponent},
-{path: 'productadmin', component:ProductAdminComponent},
-{path: 'products/detail/:id', component:ProductAdminDetailComponent},
-{path: 'products/edit/:id', component:ProductAdminUpdateComponent},
-{path: 'products/new', component:ProductAdminNewComponent},
-{path: 'products/delete', component:ProductAdminDeleteComponent},
+{path:'profile',component:ProfileComponent}
+
 ];
   
 @NgModule({
