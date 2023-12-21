@@ -10,9 +10,11 @@ import { throwError } from 'rxjs';
   styleUrls: ['./first.component.css']
 })
 export class FirstComponent {
+
   email: string = '';
   password: string = '';
   errorMessage: string = '';
+  successMessage: string = ''; // Property to store success message
 
   constructor(private router: Router, private http: HttpClient) {}
 
@@ -32,8 +34,9 @@ export class FirstComponent {
       )
       .subscribe((resultData: any) => {
         if (resultData.status) {
-          // Navigate to a different route on successful login
-          this.router.navigateByUrl('/dashboard'); // Assuming '/dashboard' is the route
+          // Set success message and navigate to a different route on successful login
+          this.successMessage = "Login Successful!";
+          this.router.navigateByUrl(''); // Update with your successful login route
         } else {
           this.errorMessage = "Incorrect Email or Password";
         }
