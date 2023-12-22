@@ -1,24 +1,30 @@
-require('dotenv').config(); // Add this at the top
+require('dotenv').config(); 
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const morgan = require("morgan");
+
+const userRoutes = require('./route/routes'); // Your existing routes
+const productRoutes = require('./route/productRoutes'); // The new product routes
 
 const app = express();
-const port = process.env.PORT || 9992; // Use environment variable for the port
+const port = process.env.PORT || 9992;
 
 // Middleware
+app.use(morgan("combined"));
 app.use(cors({ origin: "http://localhost:4200" }));
-app.use(express.json());
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ limit: '10mb', extended: true }));
 
 // MongoDB connection
-const dbUri = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/petopiadb"; // Use environment variable for MongoDB URI
+const dbUri = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/petopiadb";
 mongoose.connect(dbUri)
     .then(() => console.log("Successfully connected to DB"))
     .catch(error => console.log("Error connecting to DB:", error));
 
 // Routes
-const routes = require('./route/routes');
-app.use(routes);
+app.use(userRoutes); // Use existing routes
+app.use('/products', productRoutes); // Use product routes
 
 // Error Handling Middleware
 app.use((err, req, res, next) => {
@@ -27,10 +33,6 @@ app.use((err, req, res, next) => {
 });
 
 // Starting the server
-app.listen(port, function(err) {
-    if (err) {
-        console.log("Error:", err);
-    } else {
-        console.log(`Server started on port ${port}`);
-    }
+app.listen(port, () => {
+    console.log(`Server started on port ${port}`);
 });
