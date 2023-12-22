@@ -1,8 +1,9 @@
+
 import { Component } from '@angular/core';
-import { ProductApiService } from '../product-api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import {ClientProductService} from '../Client-product.service';
-
+import { Product } from '../Products';
+import { CartService } from '../cart.service';
 @Component({
   selector: 'app-catalog',
   templateUrl: './catalog.component.html',
@@ -17,7 +18,12 @@ export class CatalogComponent {
   tableSize: number=9;
   tableSizes: any = [5,10,15,20];
   errMessage: string = ''
-  constructor(public _service: ClientProductService, private _router: Router, private _activeRoute: ActivatedRoute) {
+  constructor(
+    public _service: ClientProductService, 
+    private _router: Router, 
+    private _activeRoute: ActivatedRoute,
+    private cartService: CartService  // Inject the CartService
+  )  {
     this.getProducts()
     this.page = 1
     
@@ -41,4 +47,11 @@ this.getProducts();
       console.log(this.products)
     })
   }
+  addToCart(product: Product) {
+    this.cartService.addItem(product);
+    alert('Product added to cart successfully!');
+    console.log(this.cartService.getItems());
+
+  }
+
 }

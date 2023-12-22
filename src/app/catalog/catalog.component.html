@@ -90,17 +90,10 @@
                 <div class="price">
                     <div>{{product.price}} VND</div>
                 </div>
-                <button class="btn-color">Add to Cart</button>
+                <button (click)="addToCart(product)" class="btn-color">Add to Cart</button>
             </div>
             <!-- ... (Add more product entries as needed) ... -->
         </div>
-        <div class="page-numbers">
-          <div class="page-number">1</div>
-          <div class="page-number">2</div>
-          <div class="page-number">3</div>
-          <div class="page-number">...</div>
-          <div class="page-number">40</div>
-      </div>
       </div>
     
       

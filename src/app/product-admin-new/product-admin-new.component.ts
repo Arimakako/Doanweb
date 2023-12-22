@@ -31,8 +31,14 @@ export class ProductAdminNewComponent {
   }
 
   postProduct() {
-    if (this.product.pettype == '' || this.product.name == '' || this.product.price == '' || this.product.cate == ''|| this.product.des == '' ) {
-      this.invalidProduct()
+    if (
+      this.product.pettype.toString() === '' ||
+      this.product.name.toString() === '' ||
+      this.product.price.toString() === '' ||
+      this.product.cate.toString() === '' ||
+      this.product.des.toString() === ''
+    ) {
+      this.invalidProduct();
     } else {
       this._service.postProduct(this.product).subscribe({
         next: (data) => { this.product = data, this.success() },
@@ -53,6 +59,6 @@ export class ProductAdminNewComponent {
 
   // route admin to fashions page
   cancel() {
-    this._router.navigate(['/productadmin'])
+    this._router.navigate(['/product-admin'])
   }
 }

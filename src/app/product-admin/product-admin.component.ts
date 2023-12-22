@@ -21,15 +21,15 @@ export class ProductAdminComponent {
   }
 
   createProduct() {
-    this._router.navigate(['products/new'])
+    this._router.navigate(['product-admin/new'])
   }
 
   updateProduct(productId: string) {
-    this._router.navigate(['products/edit', productId])
+    this._router.navigate(['product-admin/edit', productId])
   }
 
   detailProduct(productId: string) {
-    this._router.navigate(['products/detail', productId])
+    this._router.navigate(['product-admin/detail', productId])
   }
 
   deleteProduct(productId: string) {
