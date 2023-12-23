@@ -1,75 +1,72 @@
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, map, Observable, retry, throwError } from 'rxjs';
-import { Product } from './Products';
+import { Blog } from './Blogs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProductApiService {
+export class BlogApiService {
 
   constructor(private _http: HttpClient) { }
-getProducts():Observable<any>
+getBlogs():Observable<any>
 {
 const headers=new HttpHeaders().set("Content-Type","text/plain;charset=utf- 8")
 const requestOptions:Object={
 headers:headers,
 responseType:"text"
 }
-return this._http.get<any>("/products",requestOptions).pipe(
-map(res=>JSON.parse(res) as Array<Product>),
+return this._http.get<any>("/blogs",requestOptions).pipe(
+map(res=>JSON.parse(res) as Array<Blog>),
 retry(3),
 catchError(this.handleError))
 }
 
-  // get product by id
-  getProduct(productId: string): Observable<any> {
+  getBlog(blogId: string): Observable<any> {
     const headers = new HttpHeaders().set("Content-Type", "text/plain;charset=utf-8")
     const requestOptions: Object = {
       headers: headers,
       responseType: "text"
     }
-    return this._http.get<any>("/products/" + productId, requestOptions).pipe(
-      map(res => JSON.parse(res) as Array<Product>),
+    return this._http.get<any>("/blogs/" + blogId, requestOptions).pipe(
+      map(res => JSON.parse(res) as Array<Blog>),
       retry(3),
       catchError(this.handleError))
   }
 
-  // post new product
-  postProduct(aproduct: Product): Observable<any> {
+  postBlog(ablog: Blog): Observable<any> {
     const headers = new HttpHeaders().set("Content-Type", "application/json;charset=utf-8")
     const requestOptions: Object = {
       headers: headers,
       responseType: "text"
     }
-    return this._http.post<any>("/products", JSON.stringify(aproduct), requestOptions).pipe(
-      map(res => JSON.parse(res) as Array<Product>),
+    return this._http.post<any>("/blogs", JSON.stringify(ablog), requestOptions).pipe(
+      map(res => JSON.parse(res) as Array<Blog>),
       retry(3),
       catchError(this.handleError))
   }
 
-  // put product
-  putProduct(aproduct: Product): Observable<any> {
+  putBlog(ablog: Blog): Observable<any> {
     const headers = new HttpHeaders().set("Content-Type", "application/json;charset=utf-8")
     const requestOptions: Object = {
       headers: headers,
       responseType: "text"
     }
-    return this._http.put<any>("/products", JSON.stringify(aproduct), requestOptions).pipe(
-      map(res => JSON.parse(res) as Array<Product>),
+    return this._http.put<any>("/blogs", JSON.stringify(ablog), requestOptions).pipe(
+      map(res => JSON.parse(res) as Array<Blog>),
       retry(3),
       catchError(this.handleError))
   }
 
-  // delete product
-  deleteProduct(productId: string): Observable<any> {
+
+  deleteBlog(blogId: string): Observable<any> {
     const headers = new HttpHeaders().set("Content-Type", "application/json;charset=utf-8")
     const requestOptions: Object = {
       headers: headers,
       responseType: "text"
     }
-    return this._http.delete<any>("/products/" + productId, requestOptions).pipe(
-      map(res => JSON.parse(res) as Array<Product>),
+    return this._http.delete<any>("/blogs/" + blogId, requestOptions).pipe(
+      map(res => JSON.parse(res) as Array<Blog>),
       retry(3),
       catchError(this.handleError))
   }

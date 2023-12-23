@@ -18,18 +18,14 @@ export class ProductAdminDeleteComponent {
   }
 
   // delete product
-  deleteProduct(Id: string) {
-    if (this.validate(Id)) {
-      this._service.deleteProduct(Id).subscribe({
+  deleteProduct(productId: string) {
+
+      this._service.deleteProduct(productId).subscribe({
         next: (data) => {
-          this.products = data,
-            this.errMessage = 'Delete successfully',
-            this.reset(),
-            this.getProducts()
+          this.products = data
         },
         error: (err) => { this.errMessage = err },
       })
-    }
   }
 
   // get products
@@ -40,26 +36,5 @@ export class ProductAdminDeleteComponent {
     })
   }
 
-  // reset
-  reset() {
-    this.productId = ''
-    this.errMessage = ''
-  }
 
-  // validate
-  validate(productId: string) {
-    if (productId == '') {
-      this.errMessage = 'Please enter product id'
-      return false
-    } else
-      // check if productId is hex string or not
-      if (!/^[0-9a-fA-F]{24}$/.test(productId)) {
-        this.errMessage = 'Fashion id is not hex string'
-        return false
-      }
-      else {
-        this.errMessage = ''
-        return true
-      }
-  }
 }

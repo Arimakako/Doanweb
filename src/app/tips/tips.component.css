@@ -1,8 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+.bg-color{
+    background: #22668D;
+}
+.text-color{
+    color: #FFCC70;
+}
 body, html {
     height: 100%;
     margin: 0;
     padding: 0;
 }
+.pagination {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+  }
+  
+  .pagination a.active {
+    background-color: #22668D;
+    color: white;
+  }
 h1{
     text-align: center;
     font-size: 36pt;
@@ -15,7 +32,7 @@ h3 {
     font-size: 20pt;
 }
 .paragraph {
-    font-family: Georgia, serif;
+    font-family: Nunito, serif;
     font-size: 17px;
     line-height: 2;
     margin-bottom: 10px;

@@ -33,15 +33,12 @@ export class ProductAdminComponent {
   }
 
   deleteProduct(productId: string) {
-    // confirm delete
-    if (confirm("Are you sure to delete this product?")) {
-      this._service.deleteProduct(productId).subscribe({
-        next: (data) => { this.products = data, this.getProducts();
-          window.location.reload(); // Reload the page
-         },
-        error: (err) => { this.errMessage = err }
-      })
-      this.getProducts()
-    }
-  }
+
+    this._service.deleteProduct(productId).subscribe({
+      next: (data) => {
+        this.products = data
+      },
+      error: (err) => { this.errMessage = err },
+    })
+}
 }
