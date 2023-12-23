@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+.btn-color{
+  background: #FFCC70;
+}
 .catalog-container {
   display: grid;
   grid-template-columns: auto 1fr; /* Two columns: auto for filter-container, 1fr for container */
@@ -224,7 +227,16 @@
   gap: 8px;
   display: inline-flex;
 }
+.pagination {
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+}
 
+.pagination a.active {
+  background-color: #22668D;
+  color: white;
+}
 /* Original price styles */
 .original-price {
   text-align: center;

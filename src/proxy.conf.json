@@ -1,9 +1,18 @@
 [
     {
+
         "context": ["/combos"],
         "target": "http://localhost:3002",
         "secure": true,
         "changeOrigin":true,
         "logLevel":"debug"
         }
+  {
+    "context": ["/products"],
+    "target": "http://localhost:3006",
+    "secure": true,
+    "changeOrigin":true,
+    "logLevel":"debug"
+}
+
 ]

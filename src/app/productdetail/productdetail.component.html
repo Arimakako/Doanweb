@@ -1,24 +1,23 @@
-<div>
-    <span>
-<a style ="color: #6f6060;" href ="" >Products</a>
-<a style ="color: #6f6060;" href ="" >/Care products</a>
-<a style ="color: #6f6060;" href ="assets/images/productdetail_img/Care1.png" >/Sữa Tắm Gội & Dầu xả Budle'Budle ECOLAND GENERAL Hàn Quốc 500ml</a>
-    </span>
+<div class="col-lg-12 d-flex justify-content-end">
+    <button class="btn-color" (click)="goBack()">Back</button>
 </div>
-<br>
-<br>
 <div class="product-container">
     <div class="product-image">
-        <img src="assets/images/productdetail_img/Care1.png" alt="Product Image" />
+        <img src="{{product.img}}" alt="Product Image" />
     </div>
 
     <div class="product-info">
         <div class="product-details">
-            <div class="product-name">Under Stair Hamster House</div>
-            <div class="discounted-price">155,000 VND</div>
-            <div class="actual-price">
-                <div class="actual-price-value">129.000VND</div>
-            </div>
+            <div class="product-name">{{product.name}}</div>
+        </div>
+        <div>
+
+        </div>
+        <div>
+            
+        </div>
+        <div class="actual-price">
+            <div class="actual-price-value">{{product.price}} VND</div>
         </div>
         <div class="size-selection">
             <div class="size-options">
@@ -63,7 +62,6 @@
         <div class="divider"></div>
     </div>
     <div class="description-content">
-        <p>Sleek and timeless. Titanium glasses with an innovative bridge...</p>
-        <p>99.7% pure titanium front<br />More than 4hv on the Vickers hardness test...</p>
+        <p>{{product.des}}</p>
     </div>
 </div>

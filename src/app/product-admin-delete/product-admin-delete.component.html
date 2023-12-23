@@ -1,0 +1,29 @@
+<p>{{errMessage}}</p>
+Product Id: <input type="text" #Id> <button (click)="deleteProduct(Id.value)">Delete Fashion</button>
+<div class=" w-100">
+    <table class="table table-hover" border="1">
+      <tr class="bg-warning text-black text-center">
+        <td>Product Id</td>
+        <td>Product Name</td>
+        <td>Price</td>
+        <td>Product Description</td>
+        <td>Product image</td>
+        <td>Category</td>
+        <td>Pettype</td>
+        <td>Action</td>
+      </tr>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{product._id}}</td>
+          <td>{{product.name}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.des}}</td>
+          <td>
+            <img src="{{product.img}}" width="150px" height="150px">
+          </td>
+          <td>{{product.cate}} </td>
+          <td>{{product.pettype}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

@@ -1,92 +1,60 @@
-
 <div class="container">
-    <div class="header-check">
-      <h2>Your cart</h2>
-      <button type="button" class="btn btn-link top-right-button-back">Back</button>
-</div>
-    <main>
-      <div class="order">
-          <table class="table table-checkout">
-            <thead>
-              <tr>
-                <td><label>
-                  <input type="checkbox" class="childCheckbox"> 
-                </label></td>
-                <th scope="col">Items</th>
-                <th scope="col">Prices</th>
-                <th scope="col">Qty</th>
-                <th scope="col">Total</th>
-                <th scope="col">Operation</th>
-              </tr>
-            </thead>
-            <tbody>
-              
-              <tr>
-                <td><label>
-                  <input type="checkbox" class="childCheckbox"> 
-                </label></td>
-                <td class="w-50">
-                  <img src="\assets\images\productdetail_img\toy9.png" class="img-fluid" alt="Sheep">
-                  Under stair Hamster house</td>
-                <td>129.000VND</td>
-               <td class="qty"><input type="text" class="form-control" id="input1" value="0"></td>
-               <td>129000</td>
-               <td class="Operation">cancel</td>
-             </tr>
-             <!--them tr moi khi co san pham-->
-           </tbody>
-         </table> 
-         <table class="table table-checkout plans">
-            <thead>
-              <tr>
-                <th scope="col"><label>
-                    <input type="checkbox" id="selectAll" onchange="toggleCheckboxes()"></label> </th>
-                <th scope="col"> 
-                  Plans and Service</th>
-                <th scope="col">Prices</th>
-                <th scope="col">Qty</th>
-                <th scope="col">Total</th>
-                <th scope="col">Operation</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><label>
-                    <input type="checkbox" class="childCheckbox"> 
-                  </label></td>
-                <td class="w-50">
-                  <img src="\assets\images\services_img\h2.png" class="img-fluid" alt="Sheep">
-                  Under stair Hamster house</td>
-                <td>129.000VND</td>
-               <td class="qty"><input type="text" class="form-control" id="input1" value="0"></td>
-               <td>129000</td>
-               <td>cancel</td>
-             </tr>
-             <!--them tr moi khi co san pham-->
-           </tbody>
-         </table> 
+  <div class="header-check">
+    <h2>Your cart</h2>
+    <button type="button" class="btn btn-link top-right-button-back">Back</button>
+  </div>
+  <main>
+    <div class="order">
+        <!-- Product Table -->
+        <table class="table table-checkout">
+          <thead>
+            <tr>
+              <td></td>
+              <th scope="col">Items</th>
+              <th scope="col">Prices</th>
+              <th scope="col">Qty</th>
+              <th scope="col">Total</th>
+              <th scope="col">Operation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Loop through cart items -->
+            <tr *ngFor="let item of cartItems; let i = index">
+              <td><input type="checkbox" class="childCheckbox"></td>
+              <td class="w-50">
+                <img [src]="item.img" class="img-fluid" [alt]="item.name">
+                {{item.name}}
+              </td>
+              <td>{{item.price| number :'1.0-0':'fr'}} VND</td>
+              <td class="qty">
+                <input type="number" class="form-control" [(ngModel)]="item.quantity" min="1" >
+              </td>
+              <td>{{item.price * item.quantity}} VND</td>
+              <td class="Operation">
+                <button class="btn btn-danger" (click)="removeFromCart(item)">Cancel</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="container check-out-order">
+      <div class="row">
+        <div class="col-sm-6 d-flex justify-content-center">
+          <button type="button" class="btn btn-success" >Proceed to checkout</button>
         </div>
-      <div class="container check-out-order">
-        <div class="row">
-          <div class="col-sm-6 d-flex justify-content-center">
-            <button type="button" class="btn btn-success">Proceed to checkout</button>
-          </div>
-          <div class="col-sm-5">
-            <div class="totals">
-              <div class="totals-item d-flex justify-content-between">
-                <label>Subtotal(x items)</label>
-                <div class="totals-value" id="cart-subtotal">0</div>
-              </div>
-              <div class="totals-item d-flex justify-content-between">
-                <label>Shipping fee</label>
-                <div class="totals-value" id="cart-shipping">0</div>
-              </div>
-              <div class="totals-item totals-item-total d-flex justify-content-between">
-                <label>Grand Total</label>
-                <div class="totals-value" id="cart-total">0</div>
-              </div>
+        <div class="col-sm-6">
+          <div class="totals">
+            <div class="totals-item d-flex justify-content-between">
+              <label>Subtotal ({{cartItems.length}} items)</label>
+              <div class="totals-value" id="cart-subtotal">{{total}}</div>
+            </div>
+            <div class="totals-item totals-item-total d-flex justify-content-between">
+              <label>Grand Total</label>
+              <div class="totals-value" id="cart-total">{{total}}</div>
             </div>
           </div>
         </div>
       </div>
+    </div>
   </main>
+</div>
