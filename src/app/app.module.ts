@@ -23,6 +23,13 @@ import { FirstComponent } from './first/first.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
+import { ComboAdminComponent } from './combo-admin/combo-admin.component';
+import { ComboNewComponent } from './combo-new/combo-new.component';
+import { ComboUpdateComponent } from './combo-update/combo-update.component';
+import { ComboDeleteComponent } from './combo-delete/combo-delete.component';
+import { ComboDetailComponent } from './combo-detail/combo-detail.component';
+import { ComboeachComponent } from './comboeach/comboeach.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +52,13 @@ import { FormsModule } from '@angular/forms';
     FirstComponent,
     SignupComponent,
     ProfileComponent,
+    ComboAdminComponent,
+    ComboNewComponent,
+    ComboUpdateComponent,
+    ComboDeleteComponent,
+    ComboDetailComponent,
+    ComboeachComponent,
+    NotFoundComponent,
 
   ],
   imports: [

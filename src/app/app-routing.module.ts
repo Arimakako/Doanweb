@@ -14,6 +14,14 @@ import { OrderTrackingComponent } from './order-tracking/order-tracking.componen
 import { FirstComponent } from './first/first.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
+import { PlansComponent } from './plans/plans.component';
+import { ComboComponent } from './combo/combo.component';
+import { ComboNewComponent } from './combo-new/combo-new.component';
+import { ComboUpdateComponent } from './combo-update/combo-update.component';
+import { ComboAdminComponent } from './combo-admin/combo-admin.component';
+import { ComboDetailComponent } from './combo-detail/combo-detail.component';
+import { ComboeachComponent } from './comboeach/comboeach.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
 {path:'',component:HomeComponent},
@@ -29,8 +37,16 @@ const routes: Routes = [
 {path:'cart',component:CartComponent},
 {path:'tracking',component:OrderTrackingComponent},
 {path:'signup',component:SignupComponent},
-{path:'profile',component:ProfileComponent}
-
+{path:'profile',component:ProfileComponent},
+{path: 'plans', component:PlansComponent},
+{path:'combo', component:ComboComponent},
+{path: 'newcombo', component:ComboNewComponent},
+{path:'updatecombo/:id',component:ComboUpdateComponent},
+{path:'deletecombo/:id',component:ComboUpdateComponent},
+{path:'admincombo',component:ComboAdminComponent},
+{path:'detailcombo/:id',component:ComboDetailComponent},
+{path:'combos/:id',component:ComboeachComponent},
+{path:'**',component:NotFoundComponent},
 ];
   
 @NgModule({
