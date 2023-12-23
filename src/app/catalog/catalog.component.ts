@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { ProductApiService } from '../product-api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import {ClientProductService} from '../Client-product.service';
-
 @Component({
   selector: 'app-catalog',
   templateUrl: './catalog.component.html',
