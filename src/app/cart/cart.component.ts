@@ -8,7 +8,7 @@ import { CartService } from '../cart.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  cartItems: Product[] = [];
+    cartItems: Product[] = [];
 
   constructor(private cartService: CartService) {}
 
@@ -17,20 +17,22 @@ export class CartComponent implements OnInit {
   }
 
   loadCartItems() {
-    this.cartItems = this.cartService.getItems();
+    this.cartService.cartItems$.subscribe(items => {
+      this.cartItems = items;
+    });
   }
 
   removeFromCart(item: Product) {
-    this.cartService.removeItem(item);
-    this.loadCartItems();
+    this.cartService.removeItem(item._id);
+    // Không cần gọi loadCartItems() vì cartItems$ sẽ tự động cập nhật
   }
 
   clearCart() {
     this.cartService.clearCart();
-    this.loadCartItems();
   }
 
   get total() {
     return this.cartService.calculateTotal();
   }
 }
+
