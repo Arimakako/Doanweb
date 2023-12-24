@@ -31,6 +31,6 @@ export class ProductAdminDetailComponent {
     })
   }
   goBack() {
-    this._router.navigate(['productadmin']);
+    this._router.navigate(['product-admin']);
   }
 }

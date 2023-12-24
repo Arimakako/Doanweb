@@ -23,6 +23,13 @@ import { FirstComponent } from './first/first.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
+import { ComboAdminComponent } from './combo-admin/combo-admin.component';
+import { ComboNewComponent } from './combo-new/combo-new.component';
+import { ComboUpdateComponent } from './combo-update/combo-update.component';
+import { ComboDeleteComponent } from './combo-delete/combo-delete.component';
+import { ComboDetailComponent } from './combo-detail/combo-detail.component';
+import { ComboeachComponent } from './comboeach/comboeach.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductAdminComponent } from './product-admin/product-admin.component';
 import { ProductAdminDeleteComponent } from './product-admin-delete/product-admin-delete.component';
 import { ProductAdminDetailComponent } from './product-admin-detail/product-admin-detail.component';
@@ -58,6 +65,13 @@ import { BlogDeleteComponent } from './blog-delete/blog-delete.component';
     FirstComponent,
     SignupComponent,
     ProfileComponent,
+    ComboAdminComponent,
+    ComboNewComponent,
+    ComboUpdateComponent,
+    ComboDeleteComponent,
+    ComboDetailComponent,
+    ComboeachComponent,
+    NotFoundComponent,
     ProductAdminComponent,
     ProductAdminDeleteComponent,
     ProductAdminDetailComponent,
@@ -69,6 +83,7 @@ import { BlogDeleteComponent } from './blog-delete/blog-delete.component';
     BlogAdminEditComponent,
     BlogUpdateComponent,
     BlogDeleteComponent,
+
 
 
   ],

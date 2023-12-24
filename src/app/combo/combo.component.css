@@ -8,7 +8,7 @@
     }
     button {
         position: relative;
-        transform: translate(30%, -40%);
+        transform: translate(23%, -40%);
         background-color: red;
         padding: 10px 20px;
         border-radius: 10px;
@@ -23,7 +23,7 @@
         font-family: 'Nunito';
     }
     .tbl{
-        width: 100%;
+        width: 50%;
         table-layout: fixed;
         font-family: 'Nunito';
     }

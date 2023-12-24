@@ -42,7 +42,7 @@ export class ProductAdminUpdateComponent {
     this.goBack();
   }
   goBack() {
-    this.router.navigate(['productadmin']);
+    this.router.navigate(['product-admin']);
   }
   onFileSelected(event: any, product: Product) {
     let me = this;
