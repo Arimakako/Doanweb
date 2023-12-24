@@ -91,10 +91,11 @@ export class ProductApiService {
     );
     const requestOptions: Object = {
       headers: headers,
-      responseType: 'text',
-    };
-    return this._http.delete<any>('/products' + productId, requestOptions).pipe(
-      map((res) => JSON.parse(res) as Array<Product>),
+      responseType: "text"
+    }
+    return this._http.delete<any>("/products/" + productId, requestOptions).pipe(
+      map(res => JSON.parse(res) as Array<Product>),
+
       retry(3),
       catchError(this.handleError)
     );

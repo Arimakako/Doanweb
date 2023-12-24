@@ -37,6 +37,12 @@ import { ProductAdminNewComponent } from './product-admin-new/product-admin-new.
 import { ProductAdminUpdateComponent } from './product-admin-update/product-admin-update.component';
 import {AngularEditorModule} from '@kolkov/angular-editor';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { PostDetailComponent } from './post-detail/post-detail.component';
+import { BlogAdminComponent } from './blog-admin/blog-admin.component';
+import { BlogAddComponent } from './blog-add/blog-add.component';
+import { BlogAdminEditComponent } from './blog-admin-edit/blog-admin-edit.component';
+import { BlogUpdateComponent } from './blog-update/blog-update.component';
+import { BlogDeleteComponent } from './blog-delete/blog-delete.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,6 +77,13 @@ import {NgxPaginationModule} from 'ngx-pagination';
     ProductAdminDetailComponent,
     ProductAdminNewComponent,
     ProductAdminUpdateComponent,
+    PostDetailComponent,
+    BlogAdminComponent,
+    BlogAddComponent,
+    BlogAdminEditComponent,
+    BlogUpdateComponent,
+    BlogDeleteComponent,
+
 
 
   ],
