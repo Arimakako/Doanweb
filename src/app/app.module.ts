@@ -43,6 +43,12 @@ import { BlogAddComponent } from './blog-add/blog-add.component';
 import { BlogAdminEditComponent } from './blog-admin-edit/blog-admin-edit.component';
 import { BlogUpdateComponent } from './blog-update/blog-update.component';
 import { BlogDeleteComponent } from './blog-delete/blog-delete.component';
+import { ServiceAdminComponent } from './service-admin/service-admin.component';
+import { ServiceAdminDetailComponent } from './service-admin-detail/service-admin-detail.component';
+import { ServiceAdminNewComponent } from './service-admin-new/service-admin-new.component';
+import { ServiceAdminDeleteComponent } from './service-admin-delete/service-admin-delete.component';
+import { ServiceAdminUpdateComponent } from './service-admin-update/service-admin-update.component';
+import { ServiceDetailComponent } from './service-detail/service-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,8 +89,12 @@ import { BlogDeleteComponent } from './blog-delete/blog-delete.component';
     BlogAdminEditComponent,
     BlogUpdateComponent,
     BlogDeleteComponent,
-
-
+    ServiceAdminComponent,
+    ServiceAdminDetailComponent,
+    ServiceAdminNewComponent,
+    ServiceAdminDeleteComponent,
+    ServiceAdminUpdateComponent,
+    ServiceDetailComponent,
 
   ],
   imports: [
@@ -94,7 +104,6 @@ import { BlogDeleteComponent } from './blog-delete/blog-delete.component';
     FormsModule,
     AngularEditorModule,
     NgxPaginationModule,
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
