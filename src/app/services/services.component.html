@@ -4,7 +4,7 @@
 
 <table class="table1">
 <tr>
-  <td> <!--Blue square 1-->
+  <td> 
       <div class="rectangle1">
         <div class="divider"></div>
         <h3>Spa Services</h3>
@@ -13,18 +13,18 @@
         <div class="divider"></div>
       </div>
   </td>
-  <td> <!--mũi tên1-->
+  <td> 
         <img class="arrow1" src="./assets/images/services_img/h10.png" id="leftArrow">
   </td>
   <td *ngFor="let service of services">
-      <div class="rectangle2"> <!--Service 1-->
+      <div class="rectangle2">
           <img class="custom-image2" src="{{service.img}}" id="img1">
           <div class="sv1" id="tt1">{{service.name}}</div>
           <div class="rectangle2b" (click)="detailService(service._id)">See more</div>
       </div>
           <div class="price">{{service.price}} VND</div>
   </td>        
-  <td style="width: 30px;">  <!--mũi tên2-->
+  <td style="width: 30px;"> 
           <img class="arrow2" src="./assets/images/services_img/h10.png"id="rightArrow">
   </td>
 </tr>
@@ -46,21 +46,21 @@
 
 <table class="table1">
 <tr>
-<td> <!--mũi tên1-->
+<td> 
   <img class="arrow1" src="./assets/images/services_img/h10.png">
 </td>
 <td *ngFor="let service of services">
-  <div class="rectangle2"> <!--Service 1-->
+  <div class="rectangle2"> 
       <img class="custom-image2" src="{{service.img}}" id="img1">
       <div class="sv1" id="tt1">{{service.name}}</div>
       <div class="rectangle2b" (click)="detailService(service._id)">See more</div>
   </div>
       <div class="price">{{service.price}} VND</div>
 </td>
-<td style="width: 30px;">  <!--mũi tên2-->
+<td style="width: 30px;">  
   <img class="arrow2" src="./assets/images/services_img/h10.png"id="rightArrow">
 </td>  
-<td> <!--Blue square 2-->
+<td> 
 <div class="rectangle01">
     <div  class="divider"></div>
     <h3>Hotel Services</h3>

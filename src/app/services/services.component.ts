@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router'; // Import Router
 import { ServiceClientService } from '../service-client.service';
 
 @Component({
@@ -8,19 +9,23 @@ import { ServiceClientService } from '../service-client.service';
 })
 export class ServicesComponent {
   services: any;
-  serviceId:string=''
-  errMessage:string=''
-  private _router: any;
-  constructor(_service:ServiceClientService){
-  _service.getServices().subscribe({
-  next:(data)=>{ this.services=data},
-  error:(err)=>{
-  this.errMessage=err
-  }
-  })
-  }
-  detailService(serviceId: string) {
-    this._router.navigate(['service/detail', serviceId])
+  serviceId: string = '';
+  errMessage: string = '';
+
+  // Inject Router vào constructor
+  constructor(private _service: ServiceClientService, private _router: Router) {
+    _service.getServices().subscribe({
+      next: (data) => {
+        this.services = data;
+      },
+      error: (err) => {
+        this.errMessage = err;
+      }
+    });
   }
 
+  detailService(serviceId: string) {
+    // Sử dụng Router để chuyển hướng đến route 'service/detail' với serviceId làm tham số
+    this._router.navigate(['service/detail', serviceId]);
+  }
 }
